@@ -5,6 +5,6 @@
 5. Java Virtual Machine
 6. Runtime Environment
 7. False
-8.
+8. string
 9.
 10.
