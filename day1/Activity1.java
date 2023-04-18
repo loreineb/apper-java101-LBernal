@@ -41,7 +41,7 @@ class FlamesHope {
         // ITEM#5 if result is less than 50, display "SAD :( ", else display name and crush name with <3 E.g "Orvyl and JY is <3"
         if (result < 50) {
             System.out.print("SAD :( ");
-        } else {System.out.print(name and crushName is <3");
+        } else {System.out.print(name + " and " + crushName + " is <3");
         }
     }
 
