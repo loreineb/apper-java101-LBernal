@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 class FlamesHope {
 
@@ -26,7 +27,7 @@ class FlamesHope {
 
         // ITEM#2: Check if crushName is not empty. If empty, display "Your crushName is required."  then the program should terminate
          if (crushName.isEmpty() == true) {
-            System.out.print("Your name is required.");
+            System.out.print("Your crushName is required.");
             return;
         }
 
@@ -40,7 +41,7 @@ class FlamesHope {
         // ITEM#5 if result is less than 50, display "SAD :( ", else display name and crush name with <3 E.g "Orvyl and JY is <3"
         if (result < 50) {
             System.out.print("SAD :( ");
-        } else {System.out.print("name + crushName is <3 ");
+        } else {System.out.print(name and crushName is <3");
         }
     }
 
