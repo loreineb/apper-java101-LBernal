@@ -2,7 +2,7 @@
 2. Programming Language
 3. Runtime Environment
 4. Standard Libraries
-5. Java Virtual Mode
+5. Java Virtual Machine
 6. Runtime Environment
 7. False
 8.
