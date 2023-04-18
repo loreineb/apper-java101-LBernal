@@ -5,6 +5,11 @@
 5. Java Virtual Machine
 6. Runtime Environment
 7. False
-8. string
-9.
-10.
+8. class
+9 and 10:
+
+class Loreine{
+  public static void main(String[] args){
+    System.out.println("My name is Loreine);
+  }
+}
