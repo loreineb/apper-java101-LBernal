@@ -3,7 +3,7 @@
 3. Runtime Environment
 4. Standard Libraries
 5. Java Virtual Mode
-6.
+6. Runtime Environment
 7.
 8.
 9.
