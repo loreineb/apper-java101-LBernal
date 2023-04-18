@@ -14,3 +14,4 @@ class Loreine{
   }
 }
 
+Bonus: Seeing the world in yellow
