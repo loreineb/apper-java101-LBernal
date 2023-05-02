@@ -27,7 +27,8 @@ public class PrimeNumbersV2 {
             //System.out.println("false");
             return false;
         }
-        for (int i = 2; i <= Math.sqrt(input); i++) { //more efficient to check only till sqrt, rather than to the half
+        for (int i = 2; i <= Math.sqrt(input); i++) { //more efficient to check only till sqrt, rather than to the half 
+            //for loops are also better than while loops, see scratch
             if (input % i == 0) { //if there is no remainder, it means there is a factor
                 //System.out.println("false");
                 return false;
