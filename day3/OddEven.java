@@ -7,18 +7,19 @@ public class Main {
         //int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; //additional testing
         isOddEven(nums);
     }
-        public static void isOddEven(int[] arr){ //made static para no need to create an instance
-            int odd = 0;
-            int even = 0;
-            for (int i = 0; i < arr.length; i++) { //other variation of for loop, however enhanced for loop is simpler to understand
-                //System.out.println(arr[i]);
-                if (arr[i] % 2 == 0) {
-                    even++;
-                } else {
-                    odd++;
-                }
+    public static void isOddEven(int[] arr){ //made static para no need to create an instance
+        int odd = 0;
+        int even = 0;
+        for (int x : arr) {
+            if (x % 2 == 0){
+                even++;
+            } else {
+                odd++;
             }
-            System.out.println("Odd: " + odd);
-            System.out.println("Even: " + even);
         }
+        System.out.println("Odd: " + odd);
+        System.out.println("Even: " + even);
     }
+}
+
+
