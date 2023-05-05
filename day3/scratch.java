@@ -110,3 +110,27 @@ public class SwitchStatements{
     }
 
 }
+
+public class Person{ //PUBLIC class means other classes can access it
+    //each object have different characters or functions, you'll make them interact with one another
+    //main goal is to mimic real life
+    //object encapsulate data, operations, and user semantics
+    //allow storage and manipulation details to be hidden
+    //separates what is to be done from how it is done
+
+    //packages is like a group of classes, a folder
+
+    //a Class is a template for creating objects
+    //
+
+    //is the field for computation? int, long, double if ever
+    //does it need to be accurate
+    //so if di need to compute and is accurate: string
+
+    //ANYTHING ASIDE FROM VOID METHOD, DAPAT MAY IREREUTRN
+    // E.G. pag public String, dapat may irereturn na String
+
+    //make public the variables or fields para accessible or kita sa iba
+    //tho dapat di daw ginagawa na public dapat may specific classes and packages lang that can access it
+    
+    //analogy: kunyari class Cake with fields/attributes, egg, flour, sugar tapos you create methods with those attributes like checkIfEggIsFresh ganun
