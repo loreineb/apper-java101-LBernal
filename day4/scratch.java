@@ -15,3 +15,8 @@
 //dun sa quiz 1, better if you had another package na pang people lang
 //if ganto, don't forget to make the chewfood public para kahit na they're not in the same package, ma-aaccess ni employee
 //check the github gist for the codes
+
+//better to put similar things together, like manager and employees in one folder together etc
+
+//a child can only have one parent, pero parents can have several children
+//like you can't inherit from both god and human ganun 
