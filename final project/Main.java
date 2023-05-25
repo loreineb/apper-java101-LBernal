@@ -138,13 +138,13 @@ interface User {
     String getName();
 }
 
-class shareALoadUser implements User {
+class shareALoadUser implements User { //when you implement an interface dapat gamitin mo lahat nung asa interface
     private String name;
     private double balance;
 
     public shareALoadUser(String name, double balance){
         this.name = name;
-        this.balance = balance; //para default balance is 100
+        this.balance = balance; 
     }
 
     public double getBalance(){
