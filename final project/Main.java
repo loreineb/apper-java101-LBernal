@@ -5,9 +5,10 @@ public class Main {
 
         Map<String, User> userBalance = new HashMap<>();
         //in a HashMap: keys cannot have duplicates, but value can have
-        //Users are saved on a Map being the Mobile number as the key and the User as the value.
-        //put existing users into HashMap
+        //Users are saved on a Map being the Mobile number as the key and the User as the value
+        //rather than <String, String> you do <String, User> para you can have balance
 
+        //put existing users into HashMap
         User u1 = new shareALoadUser("Bob", 100);
         User u2 = new shareALoadUser("Marley", 100);
         User u3 = new shareALoadUser("Seth", 100);
@@ -32,12 +33,11 @@ public class Main {
         String answer = myScanner.next();
         if (answer.equals("1")){ //not answer == "1"
             register(userBalance,myScanner);
-            //System.out.println("If you would like to register another user, enter 1. If you would like to send load, enter 2.");
         } else if (answer.equals("2")) {
             shareCheck(userBalance, myScanner);
         } else{
             System.out.println("Thank you for transacting with us! Have a great day!");
-            return;
+            return; //need to put this or else di matatapos
         }
 
         System.out.println("\nDo you have further transactions?");
@@ -49,6 +49,7 @@ public class Main {
         System.out.println("Please enter your name: ");
         String name = myScanner.next();
         boolean checkletter = name.matches("[a-zA-Z]+"); //this is better than doing a for loop
+        //regex stands for regular expression
 
         System.out.println("Please enter your mobile number: ");
         String number = myScanner.next();
@@ -68,15 +69,15 @@ public class Main {
                 System.out.println("Registration successful.");
             }
         } else if (name.isEmpty()) {
-            System.out.println("You did not enter a name. Registration unsuccessful.");
+            System.out.println("Registration unsuccessful: You did not enter a name.");
         } else if (!checkletter) {
-            System.out.println("Your input is invalid. Please enter a name consisting of only letters and no special characters. Registration unsuccessful.");
+            System.out.println("Registration unsuccessful: Your input is invalid. Please enter a name consisting of only letters and no special characters.");
         } else if (number.isEmpty()) {
-            System.out.println("You did not enter a number. Registration unsuccessful.");
+            System.out.println("Registration unsuccessful: You did not enter a number.");
         } else if (!checknumber) {
-            System.out.println("Your input is invalid. Please enter a number consisting of only numbers. Registration unsuccessful.");
+            System.out.println("Registration unsuccessful: Your input is invalid. Please enter a number consisting of only numbers.");
         } else if (numlength != 11) {
-            System.out.println("Your input is invalid. Please enter a number with 11 digits. Registration unsuccessful.");
+            System.out.println("Registration unsuccessful: Your input is invalid. Please enter a number with 11 digits.");
         }
 
     }
@@ -110,16 +111,16 @@ public class Main {
         if (sender.getBalance() >= amount){
             sender.setBalance(sender.getBalance() - amount);
             recipient.setBalance(recipient.getBalance() + amount);
-            System.out.println("Your new balance is: " + sender.getBalance() + " Thank you for transacting with us!");
+            System.out.println("Send successful: Your new balance is: " + sender.getBalance() + " Thank you for transacting with us!");
         } else {
-            System.out.println("Your load is insufficient to make this transaction. Your current load is: " + sender.getBalance());
+            System.out.println("Send unsuccessful: Your load is insufficient to make this transaction. Your current load is: " + sender.getBalance());
         }
 
     }
 
-    public static void printUserBalance(Map<String, User> userBalance){
+    public static void printUserBalance(Map<String, User> userBalance){ //para mas maganda output
         System.out.println("\nUser Balance");
-        for (Map.Entry<String, User> entry : userBalance.entrySet()){
+        for (Map.Entry<String, User> entry : userBalance.entrySet()){ //entrySet is to access the keypair
             String number = entry.getKey();
             User user = entry.getValue();
             System.out.println("User: " + user.getName() + " with registered number: " + number + " has balance: " + user.getBalance());
@@ -144,7 +145,7 @@ class shareALoadUser implements User { //when you implement an interface dapat g
 
     public shareALoadUser(String name, double balance){
         this.name = name;
-        this.balance = balance; 
+        this.balance = balance; //you put this para lang alam niya which you're referring to kasi same ng name
     }
 
     public double getBalance(){
