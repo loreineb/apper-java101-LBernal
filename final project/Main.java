@@ -28,7 +28,7 @@ public class Main {
     }
 
     public static void menu(Map<String, User> userBalance, Scanner myScanner){
-        System.out.println("Would you like to register as a user or share to an existing user? Enter 1 to register and 2 to share. Press any other key to stop transactions.");
+        System.out.println("Would you like to register as a user or share to an existing user? Enter 1 to register and 2 to share. Enter any other key to stop transactions.");
 
         String answer = myScanner.next();
         if (answer.equals("1")){ //not answer == "1"
@@ -109,13 +109,22 @@ public class Main {
     }
     public static void shareBalance(User sender, User recipient, double amount){
         if (sender.getBalance() >= amount){
-            sender.setBalance(sender.getBalance() - amount);
-            recipient.setBalance(recipient.getBalance() + amount);
-            System.out.println("Send successful: Your new balance is: " + sender.getBalance() + " Thank you for transacting with us!");
+            String pangalan = recipient.getName();
+            String censoredname = pangalan.replaceAll("[aeiou]", "*"); //to censor
+            System.out.println("You are sending to: " + censoredname + "\nIf you wish to proceed, enter 1. Enter any other key to stop share transaction.");
+
+            Scanner myScanner = new Scanner(System.in);
+            String answer = myScanner.next();
+            if (answer.equals("1")) {
+                sender.setBalance(sender.getBalance() - amount);
+                recipient.setBalance(recipient.getBalance() + amount);
+                System.out.println("Send successful: Your new balance is: " + sender.getBalance() + " Thank you for transacting with us!");
+            } else {
+                System.out.println("You have selected to stop the share transaction.");
+            }
         } else {
             System.out.println("Send unsuccessful: Your load is insufficient to make this transaction. Your current load is: " + sender.getBalance());
         }
-
     }
 
     public static void printUserBalance(Map<String, User> userBalance){ //para mas maganda output
